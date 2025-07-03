@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert</title>
+     <style>
+        body{
+            text-align: center;
+            margin: 100px;
+            font-size: larger;
+        }
+        label , input{
+            font-size: larger;
+            border: none;
+            margin: 20px;
+
+        }
+        button{
+            color: #f7f3f3;
+            background-color:#6280c0 ;
+            padding :10px 35px 10px 35px;
+            margin: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insert New Costmer</h1>
+    <form action="insert.php" method="post">
+     <label for="name">Name</label>
+     <input type="text" id="name" name="name" required>
+       <br>
+     <label for="age">Age</label>
+     <input type="number"id="age" name="age" required>
+       <br>
+     <input type="submit" value="Add"style="color: #f7f3f3;
+            background-color:#6280c0 ;
+            padding :10px 35px 10px 35px;
+            border-radius: 5px;
+            border: none;
+            font-size: larger;">
+    </form>
+     <a href="read.php" style="text-decoration: none;"><button>View</button></a>
+    <a href="index.html" style="text-decoration: none;"><button>Home</button></a>
+</body>
+</html>
