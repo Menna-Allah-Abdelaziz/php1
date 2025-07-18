@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'connect.php';
 $username=$_POST['username'];
 $pass=$_POST['password'];
@@ -9,7 +10,11 @@ $stat->execute();
 $result=$stat->get_result();
 $user=$result->fetch_assoc();
 if($user && $user['password']==$pass){
- header("location:intro.php");
+    $_SESSION['user']=[
+        'ID' =>$user['ID'] ,
+        'username'=>$user['username']
+    ];
+    header("location:intro.php");
 }else{
     header("location:login.php?error=user not found");
 }

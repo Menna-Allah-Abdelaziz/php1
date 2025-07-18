@@ -12,8 +12,12 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="logout.php" class="nav-link">
+        <i class="fas fa-sign-out-alt"></i>  
+        Logout</a>
+      </li>
     </ul>
-
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
@@ -80,7 +84,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="assets/dist/img/x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+             
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -154,7 +158,10 @@
           <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">
+          <?php
+      echo $_SESSION['user']['username'];
+          ?></a>
         </div>
       </div>
 
